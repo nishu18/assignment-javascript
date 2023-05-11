@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           .container {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div id="myDiv"></div>
+        </div>
+    
+        <script>
+          const myDiv = document.getElementById("myDiv");
+          const newText = "The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.";
+    
+          const newPara = document.createElement("h1");
+          newPara.textContent = newText;
+    
+          myDiv.appendChild(newPara);
+        </script>
+</body>
+</html>

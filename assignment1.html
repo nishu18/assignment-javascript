@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color:white;
+    }
+    #text{
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="text">click me, and change my color</h1>
+  </div>
+
+  <script>
+    const texts = document.getElementById("text");
+    texts.addEventListener('click', function changeColor(elementId, color){
+      var element = document.getElementById(elementId);
+      if (element) {
+        element.style.color = color;
+      }
+    })
+   
+    changeColor("text", "red");
+
+  </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color:white;
+    }
+    #text{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="text">click me, and change my color</h1>
+  </div>
+
+  <script>
+    const text = document.getElementById("text");
+    text.addEventListener('click', function() {
+      text.style.color = "red";
+    });
+  </script>
+</body>
+</html>

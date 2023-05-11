@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Visibility</title>
+  <style>
+    #myDiv {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="myButton">Toggle Visibility</button>
+  <div id="myDiv">This is the content that will be toggled</div>
+  
+  <script>
+    const button = document.getElementById("myButton");
+    const div = document.getElementById("myDiv");
+    
+    button.addEventListener('click', function() {
+      if (div.style.display === 'none') {
+        div.style.display = 'block';
+      } else {
+        div.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html> -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>togel</title>
+    <style>
+        .container {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:white;
+        }
+       
+        #button {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            width: 100px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        
+        #button:hover{
+            background-color: blueviolet;
+        }
+        #text{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="text">click the click me, and change me </h1>
+        <button id="button">click me</button>
+    </div>
+    <script>
+        // const button = document.getElementById("button");
+        // button.addEventListener('click', function(){
+        //     if(button.id === "button"){
+        //        document.getElementById("text").innerHTML = "change the text";
+        //        button.id = "";
+        //     } else {
+        //         document.getElementById("text").innerHTML = "click the click me, and change me ";
+        //         button.id = "button";
+        //     }
+        // });
+        const button = document.getElementById("button");
+        const h1=document.getElementById("text")
+        button.addEventListener('click', function(){
+            if(h1.style.display === "none"){
+               h1.style.display='block'
+            } else {
+                h1.style.display="none";
+            }
+        });
+    </script>
+</body>
+</html> 

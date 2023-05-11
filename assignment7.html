@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0099ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0077cc;
+}
+
+#weather {
+  font-size: 2rem;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="weather-container">
+      <h1>Weather App</h1>
+      <form>
+        <input type="text" id="city" placeholder="Enter City" />
+        <button id="submit">Get Weather</button>
+      </form>
+      <div id="weather"></div>
+    </div>
+
+    <script>
+
+const form = document.querySelector("form");
+const input = document.querySelector("#city");
+const weatherDiv = document.querySelector("#weather");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const city = input.value;
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=598916ee05573d0f2c88d2165152a964`)
+  
+    .then((response) => response.json())
+    .then((data) => {
+      const weather = data.weather[0].main;
+      const temp = data.main.temp;
+
+      weatherDiv.innerHTML = `${weather} ${temp}°C`;
+    })
+    .catch((error) => {
+      console.log(error);
+      weatherDiv.innerHTML = "Error getting weather data.";
+    });
+});
+
+    </script>
+  </body>
+</html>

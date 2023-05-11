@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #button {
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      width: 100px;
+      height: 50px;
+      border: 2px solid black;
+      border-radius: 10px;
+     
+    }
+    #button:hover{
+        background-color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Check the current date and time
+        </h1>
+        <button id="button">
+            click me
+          </button>
+    </div>
+  
+  <script>
+    const buttons = document.getElementById("button");
+    buttons.addEventListener("click", function() {
+      const dateTime = new Date().toLocaleString();
+      alert(`The current date and time is: ${dateTime}`);
+    });
+  </script>
+</body>
+
+</html>
